@@ -1775,6 +1775,13 @@ body.bd {
     background-color: hsla(188,100%,38%,.6)
 }
 
+.bl_music__lead {
+    margin-left: auto;
+    margin-right: auto;
+    color: #000;
+    line-height: 1.9
+}
+
 .bl_music__media {
     display: flex;
     justify-content: center
@@ -1835,6 +1842,27 @@ body.bd {
 .bl_cd__index_list li {
     text-indent: -1em;
     padding-left: 1em
+}
+
+.bl_ost__index_list {
+    color: #000;
+    counter-reset: ostTrack
+}
+
+.bl_ost__index_list li {
+    position: relative;
+    line-height: 1.5
+}
+
+.bl_ost__index_list li::before {
+    counter-increment: ostTrack;
+    content: counter(ostTrack) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #00a8c0;
+    font-weight: 600;
+    min-width: 2em
 }
 
 .bl_music__btn {
@@ -4187,6 +4215,12 @@ body.is_gnavOpen {
         padding: .05em 4em
     }
 
+    .bl_music__lead {
+        margin: 2.9282576867vw auto 0;
+        width: 60.0292825769vw;
+        font-size: .9375rem
+    }
+
     .bl_music__media {
         margin: 3.6603221083vw auto 0;
         gap: 4.39238653vw;
@@ -4243,6 +4277,21 @@ body.is_gnavOpen {
         gap: 0.3660322108vw;
         font-size: .75rem;
         padding-left: 1em
+    }
+
+    .bl_ost__index_list {
+        margin-top: 0.7320644217vw;
+        font-size: .6875rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(15, auto);
+        grid-auto-flow: column;
+        gap: .439238653vw 4.2459736457vw
+    }
+
+    .bl_ost__index_list li {
+        white-space: nowrap;
+        padding-left: 1.4em
     }
 
     .bl_music__btn {
@@ -5523,7 +5572,14 @@ body.is_gnavOpen {
     }
 
     .bl_music__release span {
-        padding: .05em 2em
+        padding: .08em 2em;
+        line-height: 1.4
+    }
+
+    .bl_music__lead {
+        margin-top: 5.3333333333vw;
+        padding: 0 5.3333333333vw;
+        font-size: 1.5625rem
     }
 
     .bl_music__media {
@@ -5548,7 +5604,6 @@ body.is_gnavOpen {
     }
 
     .bl_music__mediaInfo {
-        margin-top: 6.6666666667vw;
         gap: 0.6666666667vw;
         font-size: 1.875rem
     }
@@ -5567,6 +5622,17 @@ body.is_gnavOpen {
         gap: 0.6666666667vw;
         font-size: 1.6875rem;
         padding-left: 1em
+    }
+
+    .bl_ost__index_list {
+        margin-top: 2.6666666667vw;
+        font-size: 1.6875rem;
+        display: grid;
+        gap: 1.0666666667vw
+    }
+
+    .bl_ost__index_list li {
+        padding-left: 1.5em
     }
 
     .bl_music__link {
